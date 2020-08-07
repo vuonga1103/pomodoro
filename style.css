@@ -1,0 +1,75 @@
+html {
+    background: url("https://i.redd.it/0as8ohfs6h921.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  }
+body{
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%);
+}
+#countdown{
+    font-size: 400px;
+    font-family: Roboto;
+    font-weight: 900;
+    text-align: center;
+    color:antiquewhite;
+    transition: 1s;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11);
+
+    
+    
+}
+#start-button{
+    bottom: 20%;
+    text-align: center;
+    align-self: center;
+}
+
+button{
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: 400;
+    color:#fcf5ee;
+    background:#eb4559;
+    padding:50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11);
+}
+
+button:hover{
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: 400;
+    color:#fcf5ee;
+    background:#1f4068;
+    cursor: pointer;
+    padding:50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+span{
+    color:#e97171;
+}
