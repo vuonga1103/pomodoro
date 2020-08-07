@@ -35,7 +35,7 @@ function countDownOnTime(strTime) {
     let minutes = Math.floor(time / 60);
     // Add zero in front of the second if single digit
     seconds = seconds < 10 ? '0' + seconds : seconds;
-    countdownEl.innerHTML = `${minutes}:${seconds}`;
+    countdownEl.innerHTML = `${minutes}<span>:</span>${seconds}`;
     time--;
 
     // If cancel buttotn is clicked, the clearInterval, hide cancel button, and unhide buttons Div
@@ -72,7 +72,7 @@ function playMusicVideo() {
     `
   // Show the buttonsDiv again so user could choose to restart timer
   buttonsDiv.hidden = false;
-  instructionParagraph.innerText = 'Focus Again:';
+  instructionParagraph.innerText = 'To Focus Again, Select Focus Minutes:';
   cancelButton.hidden = true;
 }
 
