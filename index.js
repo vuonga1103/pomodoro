@@ -5,7 +5,7 @@ startButton.addEventListener("click", (evt) => {
 
   startButton.hidden = true;
 
-  let startingMinutes = 0.05;
+  let startingMinutes = 25;
   let time = startingMinutes * 60;
   setCountdown = setInterval(countDown, 1000);
 
@@ -16,7 +16,7 @@ startButton.addEventListener("click", (evt) => {
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
     
-    if (seconds <= 0){
+    if (time < 0){
       clearInterval(setCountdown);
       playMusicVideo();
     }
