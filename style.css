@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Pacifico&display=swap');
+
 html {
     background: url("https://i.redd.it/0as8ohfs6h921.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -9,7 +11,8 @@ html {
 
 body{
     width: 100%;
-    position: fixed;
+    height:100%;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -17,8 +20,26 @@ body{
     -webkit-transform: translate(-50%, -50%);
 }
 
+h1 {
+    margin:auto;
+    color:#d3c9b9;
+    text-align: center; 
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 100px;  
+}
+
+#app-description {
+    margin:auto;
+    color:wheat;
+    text-align: center; 
+    font-family: Roboto;
+    font-size: 20px;  
+    width: 50%;   
+}
+
 #countdown{
-    font-size: 30vw;
+    font-size: 20vw;
     font-family: Roboto;
     font-weight: 900;
     text-align: center;
@@ -85,6 +106,8 @@ body{
 }
 
 #buttons{
+    margin-top:60px;
+    gap:20px;
     color:white;
     text-align: center;
     flex-direction: column;
@@ -101,15 +124,20 @@ body{
     0 32px 32px rgba(0,0,0,0.11);
 }
 
+#buttons p{
+    font-size:30px;
+}
+
 .buttonnies{
     justify-content: center;
     display: flex;
     gap:30px;
+    margin-bottom:20px;
 }
 
 
 #cancel{
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 50%;
     margin-top:50px;
@@ -129,4 +157,32 @@ body{
 #cancel:hover {
     background-color: #cf6868;
     cursor: pointer;
+}
+
+.take-break{
+    padding:30px;
+    font-size: 20px;
+    color:#5f4f55;
+}
+
+.take-break:hover{
+    color:#504247;
+    cursor: pointer;
+}
+
+.main-header{
+    position: relative;
+    top:0px;
+    margin-bottom: 30px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+a:link{
+    color:wheat;
+    text-decoration: none;
+}
+a:visited{
+    color:#ff847c;
 }

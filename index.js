@@ -3,19 +3,25 @@ const countdownEl = document.querySelector("#countdown");
 const buttonsDiv = document.querySelector("#buttons");
 const instructionParagraph = document.querySelector("#instruction");
 const cancelButton = document.querySelector("#cancel");
+const fiveMinBreakEl = document.querySelector(".take-break");
+const appDescriptionEl = document.querySelector("#app-description");
 
 // Hide cancel button
 cancelButton.hidden = true;
+
+// Hide break span
+fiveMinBreakEl.hidden = true;
 
 // When one of the buttons in buttonsDiv is clicked, start the countdown timer
 buttonsDiv.addEventListener("click", startCountDown) 
 
 // Function to start the countdown
 function startCountDown(evt) {
-  if (evt.target.className === "minute-button") {
+  if (evt.target.classList.contains("set-time")) {
     // Hide the button div during countdown, show the cancel button and conndownEl
     buttonsDiv.hidden = true;
     cancelButton.hidden = false;
+    appDescriptionEl.hidden = true;
 
     // Call the countDownOnTime function, which takes in a string of minute, and set the timer to that
     countDownOnTime(evt.target.id);
@@ -47,6 +53,9 @@ function countDownOnTime(strTime) {
       cancelButton.hidden = true;
       // unhide the buttonsDiv
       buttonsDiv.hidden = false;
+      // hide the fiveMinBreakEl
+      fiveMinBreakEl.hidden = true;
+      appDescriptionEl.hidden = false;
     })
 
     // If the time reaches 0, then clear the interval and play the music video
@@ -70,16 +79,29 @@ function playMusicVideo() {
     `
       <iframe width="560" height="315" src=${songURLs[randomIdx]} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `
+
+  // Show finished notification
+ console.log(Notification.permission);
+  if (Notification.permission === "granted") {
+    showFinishedNotification();
+  } else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then(permission => {
+      if (permission === "granted") {
+        showFinishedNotification();
+      }
+    })
+  }
   // Show the buttonsDiv again so user could choose to restart timer
   buttonsDiv.hidden = false;
   instructionParagraph.innerText = 'To Focus Again, Select Focus Minutes:';
   cancelButton.hidden = true;
-  // const countVideoDiv = document.createElement("div")
-  // countVideoDiv.className = "count-video"
-  // countVideoDiv.append(countdownEl,buttonsDiv)
-  // const mainBody = document.querySelector('body')
-  // mainBody.append(countVideoDiv)
-  // cancelButton.hidden = true;
-  // countdownEl.id="new-countdown";
+  fiveMinBreakEl.hidden = false;
+  appDescriptionEl.hidden = true;
+}
+
+function showFinishedNotification() {
+  const notification = new Notification("Congrats!", {
+    body: "You finished your focus session!"
+  });
 }
 
