@@ -93,7 +93,7 @@ function playMusicVideo() {
   }
   // Show the buttonsDiv again so user could choose to restart timer
   buttonsDiv.hidden = false;
-  instructionParagraph.innerText = 'To Focus Again, Select Focus Minutes:';
+  instructionParagraph.innerText = 'Focus Again:';
   cancelButton.hidden = true;
   fiveMinBreakEl.hidden = false;
   appDescriptionEl.hidden = true;
