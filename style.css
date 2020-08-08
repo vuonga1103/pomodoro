@@ -44,17 +44,55 @@ h1 {
     font-family: Roboto;
     font-weight: 900;
     text-align: center;
-    color:antiquewhite;
-    transition: 1s;
+    color:#ffdbc5;
     text-shadow: 0 1px 1px rgba(0,0,0,0.11), 
     0 2px 2px rgba(0,0,0,0.11), 
     0 4px 4px rgba(0,0,0,0.11), 
     0 8px 8px rgba(0,0,0,0.11), 
     0 16px 16px rgba(0,0,0,0.11), 
-    0 32px 32px rgba(0,0,0,0.11);
+    0 32px 32px rgba(0,0,0,0.11); 
+    animation-name: expandUp;
+    -webkit-animation-name: expandUp;	
 
-    
-    
+    animation-duration: 0.7s;	
+    -webkit-animation-duration: 0.7s;
+
+    animation-timing-function: ease;	
+    -webkit-animation-timing-function: ease;		
+
+    visibility: visible;	
+}
+
+
+
+@keyframes expandUp {
+	0% {
+		transform: translateY(100%) scale(0.6) scaleY(0.5);
+	}
+	60%{
+		transform: translateY(-7%) scaleY(1.12);
+	}
+	75%{
+		transform: translateY(3%);
+	}	
+	100% {
+		transform: translateY(0%) scale(1) scaleY(1);
+	}	
+}
+
+@-webkit-keyframes expandUp {
+	0% {
+		-webkit-transform: translateY(100%) scale(0.6) scaleY(0.5);
+	}
+	60%{
+		-webkit-transform: translateY(-7%) scaleY(1.12);
+	}
+	75%{
+		-webkit-transform: translateY(3%);
+	}	
+	100% {
+		-webkit-transform: translateY(0%) scale(1) scaleY(1);
+	}	
 }
 
 #start-button{
@@ -123,6 +161,16 @@ h1 {
     0 8px 8px rgba(0,0,0,0.11), 
     0 16px 16px rgba(0,0,0,0.11), 
     0 32px 32px rgba(0,0,0,0.11);
+    animation-name: expandUp;
+    -webkit-animation-name: expandUp;	
+
+    animation-duration: 0.7s;	
+    -webkit-animation-duration: 0.7s;
+
+    animation-timing-function: ease;	
+    -webkit-animation-timing-function: ease;		
+
+    visibility: visible;	
 }
 
 #buttons p{
