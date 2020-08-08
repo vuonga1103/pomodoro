@@ -6,6 +6,7 @@ html {
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
   }
+
 body{
     width: 100%;
     position: fixed;
@@ -15,6 +16,7 @@ body{
     -ms-transform: translate(-50%, -50%); /* IE 9 */
     -webkit-transform: translate(-50%, -50%);
 }
+
 #countdown{
     font-size: 30vw;
     font-family: Roboto;
