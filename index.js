@@ -73,12 +73,13 @@ function playMusicVideo() {
   // Show the buttonsDiv again so user could choose to restart timer
   buttonsDiv.hidden = false;
   instructionParagraph.innerText = 'To Focus Again, Select Focus Minutes:';
-  const countVideoDiv = document.createElement("div")
-  countVideoDiv.className = "count-video"
-  countVideoDiv.append(countdownEl,buttonsDiv)
-  const mainBody = document.querySelector('body')
-  mainBody.append(countVideoDiv)
   cancelButton.hidden = true;
-  countdownEl.id="new-countdown";
+  // const countVideoDiv = document.createElement("div")
+  // countVideoDiv.className = "count-video"
+  // countVideoDiv.append(countdownEl,buttonsDiv)
+  // const mainBody = document.querySelector('body')
+  // mainBody.append(countVideoDiv)
+  // cancelButton.hidden = true;
+  // countdownEl.id="new-countdown";
 }
 
