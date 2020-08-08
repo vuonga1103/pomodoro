@@ -82,7 +82,6 @@ body{
 
 #countdown span{
     color:antiquewhite;
-    opacity: 0.5;
 }
 
 #buttons{
@@ -130,4 +129,16 @@ body{
     color:white;
     border-radius: 10px;;
 
+}
+
+.count-video{
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    height:800px;
+    flex-wrap: wrap;
+}
+
+#new-countdown{
+    text-align: center;
 }
