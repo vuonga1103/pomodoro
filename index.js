@@ -5,6 +5,7 @@ const instructionParagraph = document.querySelector("#instruction");
 const cancelButton = document.querySelector("#cancel");
 const fiveMinBreakEl = document.querySelector(".take-break");
 const appDescriptionEl = document.querySelector("#app-description");
+const titleHeader= document.querySelector("title")
 
 // Hide cancel button
 cancelButton.hidden = true;
@@ -41,6 +42,7 @@ function countDownOnTime(strTime) {
     // Add zero in front of the second if single digit
     seconds = seconds < 10 ? "0" + seconds : seconds;
     countdownEl.innerHTML = `${minutes}<span>:</span>${seconds}`;
+    titleHeader.innerText=`Time left: ${minutes}:${seconds}`
     time--;
     if (countdownEl.hidden===true) {
       countdownEl.hidden=false
@@ -61,6 +63,7 @@ function countDownOnTime(strTime) {
       // hide the fiveMinBreakEl
       fiveMinBreakEl.hidden = true;
       appDescriptionEl.hidden = false;
+      titleHeader.innerText="Time to Time";
     });
 
     // If the time reaches 0, then clear the interval and play the music video
@@ -72,6 +75,7 @@ function countDownOnTime(strTime) {
 }
 
 function playMusicVideo() {
+  titleHeader.innerText="Time to Time"
   // Take a random video URL and display and autoplay the video
   const songURLs = [
     "https://www.youtube.com/embed/4Z-P7qOFcDk?rel=0&start=137&autoplay=1",

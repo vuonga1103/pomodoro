@@ -288,10 +288,13 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-
-a:link{
+a{
     color:wheat;
     text-decoration: none;
+}
+
+a:link{
+    color:#ff847c;
 }
 a:visited{
     color:#ff847c;
